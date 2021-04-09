@@ -1,5 +1,16 @@
 body {
-  min-height: 1000px;
   background-color: #d1d1d1;
   font-family: "Lato", sans-serif;
+}
+
+footer p {
+  font-size: x-small;
+}
+
+section {
+  padding-top: 5rem;
+}
+
+.jumbotron {
+  padding-top: 5rem;
 }
