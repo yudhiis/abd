@@ -14,8 +14,30 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com">
 	<link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
 
+	<!-- Bootstrap Icons -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css">
+	<!-- Akhir Bootstrap Icons -->
+
 	<!-- My CSS -->
 	<link rel="stylesheet" href="./assets/style.css">
+
+	<script src="http://maps.googleapis.com/maps/api/js"></script>
+
+	<script>
+		// fungsi initialize untuk mempersiapkan peta
+		function initialize() {
+			var propertiPeta = {
+				center: new google.maps.LatLng(-7.7522215, 110.3739157),
+				zoom: 9,
+				mapTypeId: google.maps.MapTypeId.ROADMAP
+			};
+
+			var peta = new google.maps.Map(document.getElementById("googleMap"), propertiPeta);
+		}
+
+		// event jendela di-load  
+		google.maps.event.addDomListener(window, 'load', initialize);
+	</script>
 
 	<title>ABD YOGYAKARTA</title>
 </head>
@@ -23,7 +45,7 @@
 <body>
 
 	<!-- Header  -->
-	<nav class="navbar navbar-expand-lg navbar-light bg-warning shadow-lg fixed-top">
+	<nav class="navbar navbar-expand-lg navbar-light shadow-lg fixed-top" style="background-color: #f1f109;">
 		<div class="container">
 			<a class="navbar-brand" href="#">
 				<h1>ABD Yogyakarta</h1>
@@ -48,7 +70,7 @@
 						<a class="nav-link active" href="#testimoni">Testimoni</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link active" href="#">Contact</a>
+						<a class="nav-link active" href="#store">Lokasi Store</a>
 					</li>
 				</ul>
 			</div>
@@ -193,7 +215,7 @@
 				</div>
 				<div class="col-md-4 mb-3">
 					<div class="card">
-						<img src="./assets/testimoni/testimoni1.png" class="card-img-top" alt="Project 2" />
+						<img src="./assets/testimoni/testimoni2.jpg" class="card-img-top" alt="Project 2" />
 						<div class="card-body">
 							<p class="card-text">Some quick example text to build on the card title and make up the bulk
 								of the card's content.</p>
@@ -202,7 +224,7 @@
 				</div>
 				<div class="col-md-4 mb-3">
 					<div class="card">
-						<img src="./assets/testimoni/testimoni1.png" class="card-img-top" alt="Project 3" />
+						<img src="./assets/testimoni/testimoni3.jpg" class="card-img-top" alt="Project 3" />
 						<div class="card-body">
 							<p class="card-text">Some quick example text to build on the card title and make up the bulk
 								of the card's content.</p>
@@ -229,25 +251,59 @@
 				</div>
 			</div>
 		</div>
-		<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-			<path fill="#ffc107" fill-opacity="1"
-				d="M0,0L48,10.7C96,21,192,43,288,64C384,85,480,107,576,96C672,85,768,43,864,37.3C960,32,1056,64,1152,90.7C1248,117,1344,139,1392,149.3L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z">
-			</path>
-		</svg>
+
 
 	</section>
 	<!-- Akhir Testimoni -->
 
+	<!-- Store Location -->
+	<section id="store">
+		<div class="container">
+			<div class="row text-center mt-3">
+				<div class="col">
+					<h2>Lokasi Store</h2>
+				</div>
+			</div>
+			<div class="row justify-content-center">
+				<div class="col-md-6 mb-3">
+					<div class="card">
+						<div id="googleMap" style="width:100%; height:380px;"></div>
+						<div class="card-body">
+							<h4>Alat Bantu Dengar Yogyakarta</h4>
+							<p class="card-text">Jl. Ring Road Utara No.27A, Pogung Lor, Sinduadi, Kec. Mlati, Kabupaten
+								Sleman, Daerah Istimewa Yogyakarta 55284, Indonesia</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+	<!-- Akhir Store Location -->
+
+	<!-- Float Icons -->
+	<a class="tlp-fix" href="tel:+6285788840092">
+		<i class="bi bi-telephone-fill " style="font-size: 1.5rem;"></i>
+	</a>
+
+	<a class="wa-fix" href="https://wa.me/+6285788840092">
+		<i class="bi bi-whatsapp " style="font-size: 1.5rem;"></i>
+	</a>
+
+
+	<!-- Akhir Float Icons -->
+
 	<!-- Footer -->
-	<footer class="bg-warning text-black text-center pb-5">
+	<footer class="text-black text-center pb-1" style="background-color: #f1f109;">
 		<p>Connect with us</p>
 		<a href="https://www.facebook.com/AlatBantuDengarJogja">
-			<img src="./assets/icons/facebook.jpg" alt="facebook"></a>
+			<i class="bi bi-facebook" style="font-size: 2rem"></i></a>
+		<a href="mailto:ydz.afc@gmail.com">
+			<i class="bi bi-envelope-fill" style="font-size: 2rem"></i></a>
 		<a href="https://www.instagram.com/alatbantudengaryogyakarta/">
-			<img src="./assets/icons/instagram.jpg" alt="instagram"></a>
-		<a href="https://wa.me/085788840092">
-			<img src="./assets/icons/whatsapp.jpg" class="rounded" alt="instagram"></a>
-		<p>Copyright @ 2021 || Alat Bantu Dengar Yogyakarta</p>
+			<i class="bi bi-instagram" style="font-size: 2rem ; color: #e00d88;"></i></a>
+		<p>Copyright &copy; 2021 || Alat Bantu Dengar Yogyakarta</p>
 
 	</footer>
 	<!-- Akhir Footer -->

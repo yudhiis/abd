@@ -4,7 +4,7 @@ body {
 }
 
 footer p {
-  font-size: x-small;
+  font-size: 0.6rem;
 }
 
 section {
@@ -13,4 +13,34 @@ section {
 
 .jumbotron {
   padding-top: 5rem;
+}
+
+.tlp-fix {
+  height: 50px;
+  width: 50px;
+  background-color: #0007ff;
+  position: fixed;
+  bottom: 140px;
+  right: 40px;
+  color: #fff;
+  border-radius: 50px;
+  text-align: center;
+  font-size: 30px;
+  box-shadow: 2px 2px 3px #999;
+  z-index: 100;
+}
+
+.wa-fix {
+  height: 50px;
+  width: 50px;
+  background-color: #0cc50c;
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  color: #fff;
+  border-radius: 50px;
+  text-align: center;
+  font-size: 30px;
+  box-shadow: 2px 2px 3px #999;
+  z-index: 100;
 }
